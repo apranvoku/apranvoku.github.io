@@ -1,9 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ardit Page</title>
+
+    <link href="Chunks.jpg">
+    <link href="PerlinNoise.jpg">
+    <link href="Saves.jpg">
+    <link href="Trees.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<iframe src="https://ardito.netlify.app" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="1080px" width="1920px" allowfullscreen>
-</iframe>
+    <h1 class="title">٩(◕‿◕｡)۶Welcome to My Site٩(◕‿◕｡)۶</h1>
+
+    <div class="container">
+        <iframe src="https://ardito.netlify.app" frameborder="0" class="minecraft"></iframe>
+    </div>
+
+    <div class="section-group">
+        <div class="section section-controls">
+            <span>
+            Controls:
+            <br>
+            1-5 To Select Block
+            <br>
+            Toggle Lock Cursor: L
+            <br>
+            Movement: W, A, S, D
+            <br>
+            Toggle Gravity: G
+            <br>
+            Save: E
+            <br>
+            Reload Game: R
+            <br>
+            Reset Player to Spawn: T
+            <br>
+            Place Block: Right Click
+            <br>
+            Remove Block: Left Click
+            <br>
+            Jump: Space
+            <br>
+            </span>
+        </div>
+        
+    </div>
+
+    <div class="section-group">
+        <div class="box">
+            <div class="content">
+                <div class="text">
+                    <h2>How it Works</h2>
+                    <h3>Chunk Base Voxel System</h3>
+                    <p class="section-text">The world is built by default with a 4x4 arrangement of chunks. Each chunk consists of a 32x32 single-layer thick sheet of cubes which are generated upon runtime. By reducing the total amount of vertices and triangles stored in each GameObject, we can drastically reduce the time need to query triangles when the player adds or removes blocks.</p>
+                </div>
+                <div class="imgBx">
+                    <img src="Chunks.jpg" alt="Chunk System">
+                </div>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="content">
+                <div class="text">
+                    <h3>Terrain Generation</h3>
+                    <p class="section-text">All chunks are seeded with the same random seed, so they blend seamlessly across edges. To generate terrain, Perlin noise is sampled at three different frequencies, then added together. The user is further given the option to adjust the amplitude of each frequency before generating their world.</p>
+                </div>
+                <div class="imgBx">
+                    <img src="PerlinNoise.jpg" alt="Perlin Noise">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <div class="text">
+                    <h3>The Save System</h3>
+                    <p class="section-text">Upon creation and again upon saving the world, the first vertex of every cube in each chunk is saved. Upon loading, the location of these vertices is used to regenerate each cube, and preserve the changes the player has made to their world.</p>
+                </div>
+                <div class="imgBx">
+                    <img src="Saves.jpg" alt="Save System">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <div class="text">
+                    <h3>Trees</h3>
+                    <p class="section-text">Depending on the tree density parameter set upon world creation, a tree has about a 2% chance to be "planted" every time a cube is generated. Currently, all trees appear the same as they are all generated from the same three-dimensional array blueprint.</p>
+                </div>
+                <div class="imgBx">
+                    <img src="Trees.jpg" alt="Trees">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <div class="text">
+                    <h3>Code</h3>
+                    <p class="section-text">All code for the project is available <a href="https://github.com/apranvoku/UnityCraft" target="_blank">here</a></p>
+                </div>
+            </div>
+        </div>
+        <a data-auto-recognition="true" href="mailto:pranvoku.ardit@gmail.com">pranvoku.ardit@gmail.com</a>
+    </div>
 </body>
 </html>
