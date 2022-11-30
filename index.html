@@ -23,7 +23,7 @@
 </head>
 <body>
     
-    <div class="container pt-5">
+    <div class="title container pt-5">
         <div class="justify-content center align-items-center">
             <div class="col-md-12 text-center">
                 <h1>
@@ -33,15 +33,16 @@
         </div>
     </div>
 
-    <div class="ratio ratio-16x9">
-        <iframe src="https://ardito.netlify.app" title="Minecraft in Unity" allowfullscreen></iframe>
+    <div class="iframe-container">
+        <iframe src="https://ardito.netlify.app" class="responsive-iframe" title="Minecraft in Unity" allowfullscreen></iframe>
     </div>
 
     <section id="content">
         <!-- controls -->
-        <div class="container-lg mb-5 py-5 container-fluid bg-light">
+        <div class="container-lg-12 mb-5 py-5 container-fluid bg-light">
             <div class="row justify-content center align-items-center">
-                <div class="col-md-7 text-center text-md-start">
+                <div class="col-md-2"></div>
+                <div class="col-md-10 text-center text-md-start">
                     <h1>
                         <div class="display-5 text-muted">Controls:</div>
                     </h1>
@@ -67,62 +68,66 @@
                         Jump: Space
                         <br>
                     </span>
-                </div>
+                </div>    
             </div>
         </div>
         <!-- chunks -->
-        <div class="container-lg my-5 py-5">
+        <div class="container-lg-12 my-5 py-5">
             <div class="row justify-content center align-items-center">
-                <div class="col-md-7 text-center text-md-start">
+                <div class="col-md-2"></div>
+                <div class="col-md-5 text-center text-md-start">
                     <h1>
                         <div class="display-2">How It Works</div>
                         <div class="display-5 text-muted">Chunk Base Voxel System</div>
                     </h1>
                     <p class="lead my-4 text-muted">The world is built by default with a 4x4 arrangement of chunks. Each chunk consists of a 32x32 single-layer thick sheet of cubes which are generated upon runtime. By reducing the total amount of vertices and triangles stored in each GameObject, we can drastically reduce the time need to query triangles when the player adds or removes blocks.</p>
                 </div>
-                <div class="col-md-5 text-end d-none d-md-block">
+                <div class="col-md-3 text-end d-none d-md-block">
                     <img src="Chunks.jpg" alt="chunk based voxel system" class="img-fluid">
                 </div>
             </div>
         </div>
         <!-- terrain -->
-        <div class="container-lg my-5 py-5">
+        <div class="container-lg-12 my-5 py-5">
             <div class="row justify-content center align-items-center">
-                <div class="col-md-7 text-center text-md-start">
+                <div class="col-md-2"></div>
+                <div class="col-md-5 text-center text-md-start">
                     <h1>
                         <div class="display-5 text-muted">Terrain Generation</div>
                     </h1>
                     <p class="lead my-4 text-muted">All chunks are seeded with the same random seed, so they blend seamlessly across edges. To generate terrain, Perlin noise is sampled at three different frequencies, then added together. The user is further given the option to adjust the amplitude of each frequency before generating their world.</p>
                 </div>
-                <div class="col-md-5 text-end d-none d-md-block">
+                <div class="col-md-3 text-end d-none d-md-block">
                     <img src="PerlinNoise.jpg" alt="terrain generation" class="img-fluid">
                 </div>
             </div>
         </div>
         <!-- save -->
-        <div class="container-lg my-5 py-5">
+        <div class="container-lg-12 my-5 py-5">
             <div class="row justify-content center align-items-center">
-                <div class="col-md-7 text-center text-md-start">
+                <div class="col-md-2"></div>
+                <div class="col-md-5 text-center text-md-start">
                     <h1>
                         <div class="display-5 text-muted">The Save System</div>
                     </h1>
                     <p class="lead my-4 text-muted">Upon creation and again upon saving the world, the first vertex of every cube in each chunk is saved. Upon loading, the location of these vertices is used to regenerate each cube, and preserve the changes the player has made to their world.</p>
                 </div>
-                <div class="col-md-5 text-end d-none d-md-block">
+                <div class="col-md-3 text-end d-none d-md-block">
                     <img src="Saves.jpg" alt="save system" class="img-fluid">
                 </div>
             </div>
         </div>
         <!-- trees -->
-        <div class="container-lg my-5 py-5">
+        <div class="container-lg-12 my-5 py-5">
             <div class="row justify-content center align-items-center">
-                <div class="col-md-7 text-center text-md-start">
+                <div class="col-md-2"></div>
+                <div class="col-md-5 text-center text-md-start">
                     <h1>
                         <div class="display-5 text-muted">Trees</div>
                     </h1>
                     <p class="lead my-4 text-muted">Depending on the tree density parameter set upon world creation, a tree has about a 2% chance to be "planted" every time a cube is generated. Currently, all trees appear the same as they are all generated from the same three-dimensional array blueprint.</p>
                 </div>
-                <div class="col-md-5 text-end d-none d-md-block">
+                <div class="col-md-3 text-end d-none d-md-block">
                     <img src="Trees.jpg" alt="trees" class="img-fluid">
                 </div>
             </div>
@@ -134,110 +139,19 @@
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                     <li class="nav-item">
-                        <a href="https://github.com/apranvoku/UnityCraft" class="nav-link px-2 text-muted" target="_blank">Code</a>
+                        <a href="https://github.com/apranvoku/UnityCraft" class="nav-link px-4 text-muted" target="_blank">Code</a>
                     </li>
                     <li class="nav-item">
-                        <a data-auto-recognition="true" href="mailto:pranvoku.ardit@gmail.com" class="nav-link px-2 text-muted">Contact</a>
+                        <a data-auto-recognition="true" href="mailto:pranvoku.ardit@gmail.com" class="nav-link px-4 text-muted">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://www.linkedin.com/in/ardit-pranvoku" class="nav-link px-2 text-muted" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/ardit-pranvoku" class="nav-link px-4 text-muted" target="_blank">LinkedIn</a>
                     </li>
                 </ul>
                 <p class="text-center text-muted">©2022 by Ardit Pranvoku</p>
             </footer>
         </div>
     </section>
-
-    <!-- <div class="section-group">
-        <div class="section section-controls">
-            <span>
-            Controls:
-            <br>
-            1-5 To Select Block
-            <br>
-            Toggle Lock Cursor: L
-            <br>
-            Movement: W, A, S, D
-            <br>
-            Toggle Gravity: G
-            <br>
-            Save: E
-            <br>
-            Reload Game: R
-            <br>
-            Reset Player to Spawn: T
-            <br>
-            Place Block: Right Click
-            <br>
-            Remove Block: Left Click
-            <br>
-            Jump: Space
-            <br>
-            </span>
-        </div>
-        
-    </div>
-
-    <div class="section-group">
-        <div class="box">
-            <div class="content">
-                <div class="text">
-                    <h2>How it Works</h2>
-                    <h3>Chunk Base Voxel System</h3>
-                    <p class="section-text">The world is built by default with a 4x4 arrangement of chunks. Each chunk consists of a 32x32 single-layer thick sheet of cubes which are generated upon runtime. By reducing the total amount of vertices and triangles stored in each GameObject, we can drastically reduce the time need to query triangles when the player adds or removes blocks.</p>
-                </div>
-                <div class="imgBx">
-                    <img src="Chunks.jpg" alt="Chunk System" class="responsive" id="img001">
-                </div>
-            </div>
-        </div>
-        
-        <div class="box">
-            <div class="content">
-                <div class="text">
-                    <h3>Terrain Generation</h3>
-                    <p class="section-text">All chunks are seeded with the same random seed, so they blend seamlessly across edges. To generate terrain, Perlin noise is sampled at three different frequencies, then added together. The user is further given the option to adjust the amplitude of each frequency before generating their world.</p>
-                </div>
-                <div class="imgBx">
-                    <img src="PerlinNoise.jpg" alt="Perlin Noise" class="responsive" id="img002">
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="content">
-                <div class="text">
-                    <h3>The Save System</h3>
-                    <p class="section-text">Upon creation and again upon saving the world, the first vertex of every cube in each chunk is saved. Upon loading, the location of these vertices is used to regenerate each cube, and preserve the changes the player has made to their world.</p>
-                </div>
-                <div class="imgBx">
-                    <img src="Saves.jpg" alt="Save System" class="responsive" id="img003">
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="content">
-                <div class="text">
-                    <h3>Trees</h3>
-                    <p class="section-text">Depending on the tree density parameter set upon world creation, a tree has about a 2% chance to be "planted" every time a cube is generated. Currently, all trees appear the same as they are all generated from the same three-dimensional array blueprint.</p>
-                </div>
-                <div class="imgBx">
-                    <img src="Trees.jpg" alt="Trees" class="responsive" id="img004">
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="content">
-                <div class="text">
-                    <h3>Code</h3>
-                    <p class="section-text">All code for the project is available <a href="https://github.com/apranvoku/UnityCraft" target="_blank">here</a></p>
-                </div>
-            </div>
-        </div>
-        <a data-auto-recognition="true" href="mailto:pranvoku.ardit@gmail.com">pranvoku.ardit@gmail.com</a>
-    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
