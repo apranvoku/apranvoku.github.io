@@ -1,0 +1,3 @@
+Primary: 0C3227
+Secondary: FF2768
+Text: DDDDDD
